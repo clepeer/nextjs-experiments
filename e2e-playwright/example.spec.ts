@@ -1,18 +1,16 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures/fixtures';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  await page.goto('https://github.com/dzena/github-search-ddd');
+  await page.getByRole('link', { name: 'Issues' }).click();
+  await page.waitForLoadState('networkidle');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await page.getByRole('link', { name: 'New issue' }).click();
+  await page.waitForLoadState('networkidle');
+  await page.fill('input[name="issue[title]"]', 'Test issue');
+  await page.fill('textarea[name="issue[body]"]', 'Test issue body');
+  await page.getByRole('button', { name: 'Submit new issue' }).click();
+  await page.waitForLoadState('networkidle');
+  await page.getByRole('link', { name: 'Issues' }).click();
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});

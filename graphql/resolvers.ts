@@ -1,6 +1,6 @@
 export default {
   Query: {
-    greetings(_arg, _a, context) {
+    greetings(_arg: any, _a: any, context: any) {
       return "Hello world.";
     },
   },
