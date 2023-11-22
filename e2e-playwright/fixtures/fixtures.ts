@@ -43,8 +43,6 @@ export const test = baseTest.extend<{}, { workerStorageState: string }>({
 });
 
 async function acquireAccount(id: number) {
-    // Replace with your own authentication logic.
-    // For example, you can use a pool of accounts from a database.
     const username = process.env.GITHUB_USERNAME;
     const password = process.env.GITHUB_PASSWORD;
     if (!username || !password) {
