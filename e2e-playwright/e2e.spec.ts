@@ -1,8 +1,3 @@
-import { test, expect } from './fixtures/fixtures';
+import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  // user is already authenticated
-
-  await page.goto('https://github.com/dzena/github-search-ddd');
-});
-
+test('my testcase', async ({ page }) => {});
