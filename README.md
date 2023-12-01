@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with some extra adjustments.
 
+## Setup
+
+```
+npm install
+npx playwright install
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -12,6 +19,7 @@ npm run dev
 - Open [http://localhost:3000/api/graphql](http://localhost:3000/api/graphql) to access the interactive Graphiql interface.
 
 ### Run the e2e tests with Playwright
+
 All e2e tests are meant to test the functionality of a GitHub repository and require authentication. Make sure you don't have MFA enabled on your GitHub account.
 
 Create a `.env` file in the root of the project and add the following:
