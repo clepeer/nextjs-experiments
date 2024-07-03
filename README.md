@@ -18,6 +18,17 @@ npm run dev
 - Open [http://localhost:3000](http://localhost:3000) to see the landing page.
 - Open [http://localhost:3000/api/graphql](http://localhost:3000/api/graphql) to access the interactive Graphiql interface.
 
+### Run unit tests with jest
+
+```
+npm run test
+
+# or
+
+npx jest
+```
+
+
 ### Run the e2e tests with Playwright
 
 All e2e tests are meant to test the functionality of a GitHub repository and require authentication. Make sure you don't have MFA enabled on your GitHub account.
